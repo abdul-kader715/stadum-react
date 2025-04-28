@@ -1,0 +1,36 @@
+/* 13. error_page */
+
+.error_page {
+    padding-top: 0;
+
+    .image {
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        text-align: center;
+
+        h2 {
+            font-size: 34px;
+            color: $heading-color;
+            font-weight: 700;
+            @media (max-width:575px) {
+                margin-top: 15px;
+                font-size: 25px;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            color: rgb(99, 99, 99);
+        }
+
+        .btn_primary {
+            background: $template-color;
+            color: $white;
+        }
+    }
+}

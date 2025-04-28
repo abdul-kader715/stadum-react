@@ -1,0 +1,34 @@
+.bar {
+    height: 10px;
+    background-color: #28a745;
+    border-radius: 4px;
+    transition: width 0.5s;
+  }
+  .progres {
+    position: relative;
+    background-color: #eee;
+    height: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .percent {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .donet_btn ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  .donet_btn li {
+    margin-right: 10px;
+  }
+  .donet_btn li.active button {
+    background-color: #007bff;
+    color: white;
+  }
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }
+  

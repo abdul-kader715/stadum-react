@@ -1,0 +1,99 @@
+/*12. contact page */
+.contact_page{
+.image{
+   
+    overflow: hidden;
+    @media (max-width:991px){
+        margin-bottom: 30px;
+    }
+    img{
+        border-radius: 15px;
+        width: 100%;
+        
+        object-fit: cover;
+        height: 703px;
+        @media (max-width:991px){
+            height: 100%;
+        }
+    }
+}
+    .contact_from {
+        border-radius: 15px;
+        background-color: $white;
+        padding: 55px 70px;
+        box-shadow: 0px 0px 10.01px 0.99px rgba(0, 0, 0, 0.09);
+          
+     
+
+        @media (max-width:1399px) {
+            padding: 55px 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 10px;
+
+            h2 {
+                font-size: 30px;
+                color: rgb(20, 64, 71);
+                font-weight: 700;
+            }
+
+            span {
+                font-size: 17px;
+                color: rgb(99, 99, 99);
+                line-height: 1.647;
+            }
+        }
+
+        .from_wrap {
+            div {
+                margin-top: 30px;
+            }
+
+            .form-control {
+                width: 100%;
+                font-size: 16px;
+                color: rgb(99, 99, 99);
+                line-height: 2.5;
+                padding-left: 18px;
+                border-color: 1px solid rgb(221, 221, 221);
+                border-radius: 5px;
+                transition: all .3s ease-in-out;
+            }
+
+            .form-control:focus {
+                color: #212529;
+                border-color: 1px solid $template-color;
+                outline: 0;
+                box-shadow: 0 0 0 0.25rem transparent;
+            }
+
+            .btn_primary {
+                width: 100%;
+                background: $template-color;
+                border-radius: 25px;
+                color: $white;
+                padding: 10px 0;
+                margin-top: 20px;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}
+
+.map_right.s2 .map {
+    height: 400px;
+    margin-top: 100px;
+    @media (max-width:991px){
+        margin-top: 90px;
+    }
+    @media (max-width:767px){
+        margin-top: 40px;
+    }
+}

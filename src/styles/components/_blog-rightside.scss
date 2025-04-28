@@ -1,0 +1,190 @@
+/* blog-rightside */
+
+.blog-rightside {
+    max-width: 400px;
+@media (max-width:991px) {
+    margin-top: 50px;
+}
+    .widget_search {
+        position: relative;
+
+        .from-contol {
+            background-color: #fff;
+            width: 100%;
+            height: 40px;
+            border: 1px solid #d7d7d7;
+            border-radius: 100px;
+            padding: 6px 20px;
+            margin-bottom: 30px;
+            outline: 0;
+            box-shadow: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        button {
+            border: 0;
+            background: $template-color;
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            color: #ffffff;
+            position: absolute;
+            right: 3px;
+            top: 2px;
+        }
+    }
+
+ 
+    
+    .widget {
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #d7d7d7;
+        @media (max-width:1199px) {
+            padding: 30px 20px;  
+        }
+        .title {
+            h2 {
+                position: relative;
+                font-size: 22px;
+                color: $heading-color;
+                margin-bottom: 30px;
+                padding-bottom: 10px;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 80px;
+                    height: 3px;
+                    background: $template-color;
+                    content: '';
+                }
+            }
+        }
+    }
+
+    .widget_catagory {
+        
+
+        ul {
+            li {
+                a {
+                    font-size: 17px;
+                    color: rgb(99, 99, 99);
+                    transition: all .3s linear;
+                    display: flex;
+                    justify-content: space-between;
+
+                    i {
+                        padding-right: 5px;
+                    }
+
+                    span {
+                        text-align: right;
+                    }
+
+                    &:hover {
+                        color: $template-color;
+                    }
+                }
+
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .widget_tag {
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #d7d7d7;
+
+        .title {
+            h2 {
+
+                &::before {
+                    width: 20px;
+                }
+            }
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                margin: 10px;
+                margin-left: 0;
+
+                a {
+                    font-size: 17px;
+                    color: rgb(99, 99, 99);
+                    text-align: center;
+                    border: 1px solid #d7d7d7;
+                    padding: 2px 25px;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        background: $template-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .widget_post {
+
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .image {
+                    width: 100px;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .content {
+                    width: calc(100% - 150px);
+                    max-width: 200px;
+                    margin-left: 20px;
+                    @media (max-width:1199px) {
+                        width: calc(100% - 100px);
+                    }
+                    span {
+
+                        i{
+                            margin-right: 10px;
+                        }
+                        font-size: 14px;
+                        color: rgb(99, 99, 99);
+                    }
+
+                    h3 {
+                        margin-bottom: 0;
+                        a {
+                            font-size: 16px;
+                            color: $heading-color;
+                            font-weight: 700;
+                            line-height: 10px;
+                            transition: all 0.3s;
+                            &:hover{
+                                color: $template-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
