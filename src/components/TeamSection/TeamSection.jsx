@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+
 import teamData from '../../api/team';
-import bgShape from '../../images/team/shape.svg'
+// import bgShape from '../../images/team/shape.svg';
 
 
 // import Shape from '../../images/team/bg_shape.png'
@@ -11,6 +14,15 @@ const TeamSection = (props) => {
    const ClickHandler = () => {
       window.scrollTo(10, 0);
    }
+
+
+   const settings = {
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+   };
    return (
       <section className="team_section section_space">
          <div className="container">
@@ -23,18 +35,17 @@ const TeamSection = (props) => {
                </div>
             </div>
             <div className="team_wrap">
-               <div className="row">
-                  {teamData.slice(0, 3).map((team, index) => (
-                     <div className="col col-lg-4 col-md-6 col-12" key={index}>
+               <Slider {...settings} >
+                  {teamData.map((team, index) => (
+                     <div key={index}>
                         <div className="team_card">
                            <div className="image">
                               <img src={team.image} alt="" />
                            </div>
                            <div className="content">
-                              <div className="bgShape">
-                                 <img src={bgShape} alt="" />
+                              <div className="bgWrapper">
+                                 <div className="bgShape"></div>
                               </div>
-
                               <div className="icon">
                                  <Link onClick={ClickHandler} to={`/team-single/${team.slug}`}>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -50,30 +61,29 @@ const TeamSection = (props) => {
                                  <li><Link to="#"><i className="ti-linkedin"></i></Link></li>
                               </ul>
                            </div>
-                           {/* <div className="shape">
-                              <svg version="1.0" viewBox="0 0 370.000000 351.000000" preserveAspectRatio="xMidYMid meet">
 
-                                 <g transform="translate(0.000000,351.000000) scale(0.100000,-0.100000)" stroke="none">
-                                    <path d="M891 3499 c-268 -33 -535 -176 -788 -422 l-103 -100 0 -1489 0 -1488
-1850 0 1850 0 0 1485 0 1486 -62 -52 c-147 -122 -389 -257 -561 -313 -228 -74
--489 -76 -668 -5 -198 78 -313 167 -513 401 -142 166 -252 265 -386 350 -193
-121 -412 173 -619 147z" />
-                                 </g>
-                              </svg>
-
-                           </div> */}
                         </div>
                      </div>
                   ))}
-
-
-               </div>
+               </Slider >
 
             </div>
          </div>
-         {/* <div className="bg_shape">
-                <img src={Shape} alt="" />
-            </div> */}
+         <div className="bg_shape">
+            <svg width="1152" height="882" viewBox="0 0 1152 882" fill="none" >
+               <g filter="url(#filter0_f_2044_1207)">
+                  <circle cx="575.966" cy="440.966" r="275.966" fill="#F42E75" fillOpacity="0.08" />
+               </g>
+               <defs>
+                  <filter id="filter0_f_2044_1207" x="0" y="-135" width="1151.93" height="1151.93" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                     <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_2044_1207" />
+                  </filter>
+               </defs>
+            </svg>
+
+         </div>
       </section>
    );
 };
