@@ -42,11 +42,8 @@ const ChooseSection = (props) => {
                         <img src={shape} alt="" />
                      </div>
                   </div>
-
                </div>
             </div>
-
-
          </div>
          <div className="video-content">
             <div className="image">

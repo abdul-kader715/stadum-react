@@ -7,6 +7,9 @@ import AboutSection from '../../components/AboutSection/AboutSection'
 import CategorieSection from '../../components/CategorieSection/CategorieSection'
 import CoursesSection from '../../components/CoursesSection/CoursesSection'
 import ChooseSection from '../../components/ChooseSection/ChooseSection'
+import TeamSection from '../../components/TeamSection/TeamSection';
+import PartnerstSection from '../../components/PartnerstSection/PartnersSection'
+import CommunitySection from '../../components/CommunitySection/CommunitySection'
 import MentorshipSection from '../../components/MentorshipSection/MentorshipSection'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import BlogSection from '../../components/BlogSection/BlogSection'
@@ -14,8 +17,8 @@ import TextSliderSection from '../../components/TextSliderSection/TextSliderSect
 
 // import TestimonilSection from '../../components/TestimonilSection/TestimonilSection'
 
-// import ContactSection from '../../components/ContactSection/ContactSection'
-// import ContactInfoSection from '../../components/ContactInfoSection/ContactInfoSection'
+
+
 import FooterSection from '../../components/FooterSection/FooterSection'
 
 
@@ -29,6 +32,9 @@ function HomePage() {
          <CategorieSection />
          <CoursesSection />
          <ChooseSection />
+         <TeamSection />
+         <PartnerstSection />
+         <CommunitySection />
          <MentorshipSection />
          <CtaSection/>
          <BlogSection />
@@ -44,7 +50,6 @@ function HomePage() {
             
             
             <ContactSection hClass={'contact_section'} />
-            <ContactInfoSection hClass={'contact_info_section'}/>
              */}
       </Fragment>
    )
