@@ -6,6 +6,7 @@ import AboutSection from '../../components/AboutSection/AboutSection'
 // import ServiceSection from '../../components/ServiceSection/ServiceSection'
 import CategorieSection from '../../components/CategorieSection/CategorieSection'
 import CoursesSection from '../../components/CoursesSection/CoursesSection'
+import ChooseSection from '../../components/ChooseSection/ChooseSection'
 import MentorshipSection from '../../components/MentorshipSection/MentorshipSection'
 import CtaSection from '../../components/CtaSection/CtaSection'
 import BlogSection from '../../components/BlogSection/BlogSection'
@@ -13,7 +14,6 @@ import TextSliderSection from '../../components/TextSliderSection/TextSliderSect
 
 // import TestimonilSection from '../../components/TestimonilSection/TestimonilSection'
 
-// import ProcessSection from '../../components/ProcessSection/ProcessSection'
 // import ContactSection from '../../components/ContactSection/ContactSection'
 // import ContactInfoSection from '../../components/ContactInfoSection/ContactInfoSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
@@ -28,6 +28,7 @@ function HomePage() {
          <AboutSection />
          <CategorieSection />
          <CoursesSection />
+         <ChooseSection />
          <MentorshipSection />
          <CtaSection/>
          <BlogSection />
@@ -41,7 +42,7 @@ function HomePage() {
             
             <TestimonilSection />
             
-            <ProcessSection />
+            
             <ContactSection hClass={'contact_section'} />
             <ContactInfoSection hClass={'contact_info_section'}/>
              */}

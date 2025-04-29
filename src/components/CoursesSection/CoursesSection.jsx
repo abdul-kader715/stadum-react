@@ -7,6 +7,8 @@ import Years from '../../images/courses/2.png';
 import Seats from '../../images/courses/3.png';
 import wish from '../../images/courses/heart.png';
 import star from '../../images/courses/star.png';
+import shape from '../../images/courses/shape.png';
+import shape2 from '../../images/courses/shape2.png';
 
 
 const CoursesSection = (props) => {
@@ -302,6 +304,12 @@ const CoursesSection = (props) => {
                      </svg>
                   </div>
                </Link>
+            </div>
+            <div className="shape">
+               <img src={shape} alt="" />
+            </div>
+            <div className="shape2">
+               <img src={shape2} alt="" />
             </div>
          </div>
       </section>
