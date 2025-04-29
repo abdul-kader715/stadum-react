@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import ScrollTextAnimation from '../../components/ScrollTextAnimation/ScrollTextAnimation';
-// import HeaderSection from '../../components/HeaderSection/HeaderSection'
+import HeaderSection from '../../components/HeaderSection/HeaderSection'
 // import HeroSection from '../../components/HeroSection/HeroSection'
 import AboutSection from '../../components/AboutSection/AboutSection'
 // import ServiceSection from '../../components/ServiceSection/ServiceSection'
@@ -28,6 +28,7 @@ function HomePage() {
    return (
       <Fragment>
          <ScrollTextAnimation />
+         <HeaderSection />
          <AboutSection />
          <CategorieSection />
          <CoursesSection />
@@ -40,7 +41,8 @@ function HomePage() {
          <BlogSection />
          <TextSliderSection />
          <FooterSection />
-         {/* <HeaderSection />
+         {/* 
+         
             <HeroSection />
             
             <ServiceSection />
