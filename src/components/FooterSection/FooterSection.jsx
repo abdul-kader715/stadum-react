@@ -48,7 +48,7 @@ const FooterSection = (props) => {
    }
    return (
       <section className="footer-section">
-         <div className="footer_top">
+         <div className="footer_top fade_bottom">
             <div className="container">
                <div className="row">
                   <div className="col-lg-3 col-md-6 col-12">
@@ -194,7 +194,7 @@ const FooterSection = (props) => {
                </div>
             </div>
          </div>
-         <div className="footer_bottom">
+         <div className="footer_bottom fade_bottom">
             <div className="container">
                <div className="row align-items-center">
                   <div className="col-lg-7 col-12">

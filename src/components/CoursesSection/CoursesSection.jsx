@@ -6,9 +6,9 @@ import SemImg from '../../images/courses/1.png';
 import Years from '../../images/courses/2.png';
 import Seats from '../../images/courses/3.png';
 import wish from '../../images/courses/heart.png';
-import star from '../../images/courses/star.png';
 import shape from '../../images/courses/shape.png';
 import shape2 from '../../images/courses/shape2.png';
+import star from '../../images/courses/star.png';
 
 
 const CoursesSection = (props) => {
@@ -22,7 +22,7 @@ const CoursesSection = (props) => {
    return (
       <section className="courses_section section_space">
          <div className="container">
-            <div className="top-content">
+            <div className="top-content fade_bottom">
                <div className="row align-items-center">
                   <div className="col-lg-6 col-12">
                      <div className="top_title mb-0">
@@ -41,11 +41,10 @@ const CoursesSection = (props) => {
                </div>
             </div>
          </div>
-
          <div className="courses_wrapper">
             <div className="container">
                {activeTab === "tab1" &&
-                  <div className="row courses_content">
+                  <div className="row courses_content fade_bottom">
                      {CoursesData.slice(0, 6).map((courses, pitem) => (
                         <div className="col col-lg-4  col-md-6 col-12" key={pitem}>
                            <div className="courses_item">
@@ -305,10 +304,10 @@ const CoursesSection = (props) => {
                   </div>
                </Link>
             </div>
-            <div className="shape">
+            <div className="shape float-bob-y">
                <img src={shape} alt="" />
             </div>
-            <div className="shape2">
+            <div className="shape2 float-bob-x">
                <img src={shape2} alt="" />
             </div>
          </div>

@@ -54,7 +54,7 @@ const CategorieSection = () => {
          <div className="shape-2">
             <img src={ShapeImg2} alt="" />
          </div>
-         <div className="shape-3">
+         <div className="shape-3 float-bob-x">
             <img src={ShapeImg3} alt="" />
          </div>
       </section>

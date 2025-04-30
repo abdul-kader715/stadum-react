@@ -17,7 +17,7 @@ const PartnerstSection = (props) => {
       <section className='partnerst_section section_space'>
          <div className="container">
             <div className="wrapper">
-               <div className="top_title">
+               <div className="top_title fade_bottom">
                   <span>PARTNERS</span>
                   <h2>Learn with our <strong>partners</strong></h2>
                   <p>At Stadum University we are committed to providing a high-quality education</p>
@@ -30,7 +30,7 @@ const PartnerstSection = (props) => {
                      </div>
                   </Link>
                </div>
-               <div className="partners">
+               <div className="partners fade_bottom">
                   <div className="item">
                      <img src={p1} alt="" />
                   </div>

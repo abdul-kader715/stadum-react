@@ -1,7 +1,7 @@
 /*
     @version         : 1.0.0
-    @Template Name   : Nonta - Charity Nonprofit HTML5 Template
-    @Template author : Deferen 
+    @Template Name   : Stadum - React Template
+    @Template author : Stadum
 */
 
 /*--------------------------------------------------------------
@@ -16,17 +16,19 @@ css table of contents
 
 3. sections
 	3.1 hero_slider
-	3.2 features_section
+	3.2 countdown_section
 	3.3 about_section
-	3.4 service_section 
-	3.5 donat_section
-	3.6 causes_section
+	3.4 categorie-section 
+	3.5 courses_section
+	3.6 choose_section
 	3.7 testimonil_section
-	3.8 project_section
-	3.9 process_section
-	3.10 contact_section
-	3.11 blog_section
-	3.12 cta_section
+	3.8 team_section
+	3.9 partnerst_section
+	3.10 community_section 
+	3.11 mentorship_section
+	3.12 cta-section
+   3.13 blog-section
+   3.14 textSlider-Section
 
 4. footer_section
 
@@ -52,6 +54,7 @@ css table of contents
 @import "components/buttons";
 @import "components/form";
 @import "components/social-links";
+@import "components/animation";
 
 // layout
 @import "layout/header";

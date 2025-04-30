@@ -37,6 +37,10 @@
             font-weight: 400;
             position: relative;
 
+            a {
+               color: $white;
+            }
+
             &::before {
                position: absolute;
                right: 24px;

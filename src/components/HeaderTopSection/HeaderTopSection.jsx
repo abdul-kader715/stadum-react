@@ -28,7 +28,7 @@ const HeaderTopSection = () => {
                                  <path d="M0.626562 2.6518L7.18291 7.02286C7.43109 7.18833 7.71553 7.27105 7.99997 7.27105C8.28444 7.27105 8.56891 7.1883 8.81709 7.02286L15.3734 2.6518C15.7658 2.39039 16 1.95289 16 1.48071C16 0.668801 15.3395 0.00830078 14.5276 0.00830078H1.47241C0.660531 0.00833203 0 0.668832 0 1.48149C0 1.95289 0.23425 2.39039 0.626562 2.6518Z" fill="white" />
                               </svg>
                            </div>
-                           <span>infomail@example.com</span>
+                           <a href="mailto:infomail@example.com"><span>infomail@example.com</span></a>
                         </li>
                      </ul>
                   </div>
@@ -57,7 +57,7 @@ const HeaderTopSection = () => {
                               <span>FAQ</span>
                            </Link>
                         </li>
-                        <LanguageSelector/>
+                        <LanguageSelector />
                      </ul>
                   </div>
                </div>

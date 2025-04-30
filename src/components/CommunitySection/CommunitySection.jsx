@@ -7,15 +7,14 @@ import React from 'react';
  import Ion4 from '../../images/c-icon4.svg'
  import community_bg from '../../images/community_bg.jpg'
 import Shape from '../../images/shape.svg'
-// import icon3 from '../../images/contact/phone-call.png'
 
 const CommunitySection = (props) => {
    return (
       <section className="community_section section_space">
          <div className="container">
             <div className="row">
-               <div className="content">
-                  <div className="top_title">
+               <div className="content fade_bottom">
+                  <div className="top_title ">
                      <span>COMMUNITY</span>
                      <h2>Life long <strong>learning</strong>community</h2>
                      <p>At Stadum University we are committed to providing a high-quality education that is accessible.</p>

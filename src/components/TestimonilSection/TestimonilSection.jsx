@@ -9,6 +9,8 @@ import img1 from '../../images/testimonil/1.jpg';
 import img2 from '../../images/testimonil/2.jpg';
 import img3 from '../../images/testimonil/3.jpg';
 import start from '../../images/courses/star.png';
+import Shape from '../../images/shape-dot.png';
+import Shape2 from '../../images/about/shape.png';
 
 const TestimonilSection = () => {
    const prevRef = useRef(null);
@@ -25,9 +27,6 @@ const TestimonilSection = () => {
                   </div>
                </div>
             </div>
-
-
-
             <div className="testimonil_wrap">
                <Swiper
                   effect={'cards'}
@@ -77,6 +76,12 @@ const TestimonilSection = () => {
                   </div>
                </Swiper>
             </div>
+         </div>
+         <div className="shape">
+            <img src={Shape} alt="" />
+         </div>
+         <div className="shape2">
+            <img src={Shape2} alt="" />
          </div>
       </section>
    );

@@ -26,7 +26,7 @@ const HeaderSection = () => {
          label: "Home",
          link: "#",
          submenu: [
-            { label: "Home Style 01", link: "/" },
+            { label: "Home Style 01", link: "/home" },
             { label: "Home Style 02", link: "/" },
             { label: "Home Style 03", link: "/" },
          ],
@@ -36,7 +36,7 @@ const HeaderSection = () => {
          link: "/",
          submenu: [],
       },
-       {
+      {
          label: "Academics",
          link: "/",
          submenu: [],
@@ -60,7 +60,7 @@ const HeaderSection = () => {
          link: "/",
          submenu: [],
       },
-     
+
       {
          label: "Contact",
          link: "/",

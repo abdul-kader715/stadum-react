@@ -15,7 +15,7 @@ const ChooseSection = (props) => {
          <div className="container">
             <div className="row">
                <div className="col-lg-6 col-12">
-                  <div className="content">
+                  <div className="content fade_bottom">
                      <div className="top_title">
                         <span>WHY CHOOSE US</span>
                         <h2>The advantages of our Courses</h2>
@@ -35,10 +35,10 @@ const ChooseSection = (props) => {
                            </svg>
                         </div>
                      </Link>
-                     <div className="arrowright">
+                     <div className="arrowright float-bob-x">
                         <img src={arrowright} alt="" />
                      </div>
-                     <div className="shape">
+                     <div className="shape float-bob-x">
                         <img src={shape} alt="" />
                      </div>
                   </div>
@@ -49,7 +49,7 @@ const ChooseSection = (props) => {
             <div className="image">
                <img src={videoBG} alt="" />
             </div>
-            <VideoModal/>
+            <VideoModal />
          </div>
       </section>
    )

@@ -8,7 +8,7 @@ import Shape from '../../images/categorie/shape-3.png';
 import Shape2 from '../../images/shape-dot.png';
 
 
-// import Shape from '../../images/team/bg_shape.png'
+
 
 
 const TeamSection = (props) => {
@@ -59,13 +59,13 @@ const TeamSection = (props) => {
          <div className="container">
             <div className="row">
                <div className="col-lg-6 col-12">
-                  <div className="top_title">
+                  <div className="top_title fade_bottom">
                      <span>INSTRUCTORS</span>
                      <h2>our experienced <strong>instructors</strong></h2>
                   </div>
                </div>
             </div>
-            <div className="team_wrap">
+            <div className="team_wrap fade_bottom">
                <Slider {...settings} >
                   {teamData.map((team, index) => (
                      <div key={index}>
@@ -115,7 +115,7 @@ const TeamSection = (props) => {
             </svg>
 
          </div>
-         <div className="shape">
+         <div className="shape float-bob-x">
             <img src={Shape} alt="" />
          </div>
          <div className="shape2">

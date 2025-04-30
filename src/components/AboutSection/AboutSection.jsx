@@ -29,10 +29,10 @@ const AboutSection = () => {
                      <div className="about_img-2">
                         <img src={aboutimg2} alt="" />
                      </div>
-                     <div className="shape">
+                     <div className="shape float-bob-x">
                         <img src={aboutimg3} alt="" />
                      </div>
-                     <div className="shape2">
+                     <div className="shape2 float-bob-y">
                         <img src={aboutimg4} alt="" />
                      </div>
                      <div className="content">
