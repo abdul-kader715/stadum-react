@@ -3,7 +3,6 @@ import ScrollTextAnimation from '../../components/ScrollTextAnimation/ScrollText
 import HeaderSection from '../../components/HeaderSection/HeaderSection'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import AboutSection from '../../components/AboutSection/AboutSection'
-// import ServiceSection from '../../components/ServiceSection/ServiceSection'
 import CategorieSection from '../../components/CategorieSection/CategorieSection'
 import CoursesSection from '../../components/CoursesSection/CoursesSection'
 import ChooseSection from '../../components/ChooseSection/ChooseSection'
@@ -14,11 +13,7 @@ import MentorshipSection from '../../components/MentorshipSection/MentorshipSect
 import CtaSection from '../../components/CtaSection/CtaSection'
 import BlogSection from '../../components/BlogSection/BlogSection'
 import TextSliderSection from '../../components/TextSliderSection/TextSliderSection'
-
-// import TestimonilSection from '../../components/TestimonilSection/TestimonilSection'
-
-
-
+import TestimonilSection from '../../components/TestimonilSection/TestimonilSection'
 import FooterSection from '../../components/FooterSection/FooterSection'
 
 
@@ -34,6 +29,7 @@ function HomePage() {
          <CategorieSection />
          <CoursesSection />
          <ChooseSection />
+         <TestimonilSection />
          <TeamSection />
          <PartnerstSection />
          <CommunitySection />
@@ -42,17 +38,7 @@ function HomePage() {
          <BlogSection />
          <TextSliderSection />
          <FooterSection />
-         {/* 
-         
-            
-            <ServiceSection />
-            
-            
-            <TestimonilSection />
-            
-            
-            <ContactSection hClass={'contact_section'} />
-             */}
+
       </Fragment>
    )
 }

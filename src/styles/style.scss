@@ -30,51 +30,7 @@ css table of contents
 
 4. footer_section
 
-5. Home-style-2
-   5.1 about_section_s2
-   5.2 fanfact_section
-   5.3 service_section_s2
-   5.4 skill_section
-   5.5 donate_section
-   5.6 team_section
-   5.7 brand_section
-   5.8 video_section
-   5.9 causes_section_s2
-   5.10 choose_section
-   5.11 blog_section_s2
 
-6. Home-style-3
-   6.1 cta_section_s2
-   6.2 service_section_s3
-   6.3 about_section_s3
-   6.4 causes_section_s3
-   6.5 features_section_s2
-   6.6 story_section
-   6.7 testimonil_section_s2
-   6.8 faq_section
-   6.9 blog_section_s3
-   6.10 inastagarm_section
-
-7. Home-style-4
-   7.1 service_section_s4
-   7.2 about_section_s4
-   7.3 testimonil_section_s3
-   7.4 fanfact_section_s2
-   7.5 project_section_s3
-   7.6 video_section_s2
-   7.7 pricing_section
-
-8. causes_single_page
-
-9. team_single_section
-
-10. services_single_section
-
-11. blog_single_page
-
-12. contact page
-
-13. error_page 
 
 
 ----------------------------------------------------------------*/
@@ -94,10 +50,8 @@ css table of contents
 // components
 @import "components/top-title";
 @import "components/buttons";
-@import "components/breadcrumb";
 @import "components/form";
 @import "components/social-links";
-@import "components/blog-rightside";
 
 // layout
 @import "layout/header";
@@ -110,12 +64,3 @@ css table of contents
 
 // page
 @import "page/home-main";
-// @import "page/home-style-s2";
-// @import "page/home-style-s3";
-// @import "page/home-style-s4";
-// @import "page/causes-single";
-// @import "page/team-single";
-// @import "page/service-single";
-// @import "page/_blog-single";
-// @import "page/contact";
-// @import "page/error";

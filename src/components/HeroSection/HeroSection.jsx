@@ -1,5 +1,5 @@
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
+// import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 import CountUp from 'react-countup';
@@ -46,9 +46,6 @@ const HeroSection = () => {
                      </button>
                   </div>
                </div>
-               <div className="heroVideo">
-                  <VideoModal />
-               </div>
             </div>
             <div className="hero_slider_item">
                <img src={HeroImg2} alt="" />
@@ -71,9 +68,7 @@ const HeroSection = () => {
                      </button>
                   </div>
                </div>
-               <div className="heroVideo">
-                  <VideoModal />
-               </div>
+              
             </div>
             <div className="hero_slider_item">
                <img src={HeroImg1} alt="" />
@@ -96,9 +91,7 @@ const HeroSection = () => {
                      </button>
                   </div>
                </div>
-               <div className="heroVideo">
-                  <VideoModal />
-               </div>
+               
             </div>
             <div className="hero_slider_item">
                <img src={HeroImg2} alt="" />
@@ -121,9 +114,7 @@ const HeroSection = () => {
                      </button>
                   </div>
                </div>
-               <div className="heroVideo">
-                  <VideoModal />
-               </div>
+              
             </div>
 
          </Slider>
@@ -149,7 +140,6 @@ const HeroSection = () => {
                </Link>
             </li>
          </ul>
-
          <div className='countdown_section'>
             <div className="item">
                <div className="icon">
@@ -201,6 +191,9 @@ const HeroSection = () => {
                </div>
             </div>
          </div>
+         <div className="heroVideo">
+                  <VideoModal />
+               </div>
       </section>
 
    );
