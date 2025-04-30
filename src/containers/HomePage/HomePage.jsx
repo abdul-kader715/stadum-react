@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import ScrollTextAnimation from '../../components/ScrollTextAnimation/ScrollTextAnimation';
 import HeaderSection from '../../components/HeaderSection/HeaderSection'
-// import HeroSection from '../../components/HeroSection/HeroSection'
+import HeroSection from '../../components/HeroSection/HeroSection'
 import AboutSection from '../../components/AboutSection/AboutSection'
 // import ServiceSection from '../../components/ServiceSection/ServiceSection'
 import CategorieSection from '../../components/CategorieSection/CategorieSection'
@@ -29,6 +29,7 @@ function HomePage() {
       <Fragment>
          <ScrollTextAnimation />
          <HeaderSection />
+         <HeroSection />
          <AboutSection />
          <CategorieSection />
          <CoursesSection />
@@ -37,13 +38,12 @@ function HomePage() {
          <PartnerstSection />
          <CommunitySection />
          <MentorshipSection />
-         <CtaSection/>
+         <CtaSection />
          <BlogSection />
          <TextSliderSection />
          <FooterSection />
          {/* 
          
-            <HeroSection />
             
             <ServiceSection />
             

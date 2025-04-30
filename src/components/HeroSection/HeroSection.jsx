@@ -1,142 +1,209 @@
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
-import HeroImg1 from '../../images/slider/slider-1.jpg'
-import HeroImg2 from '../../images/slider/slider-2.jpg'
-import HeroImg3 from '../../images/slider/slider-3.jpg'
+import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
+import HeroImg1 from '../../images/slider/1.jpg';
+import HeroImg2 from '../../images/slider/2.jpg';
+import VideoModal from '../ModalVideo/ModalVideo';
 
-import HeroShape1 from '../../images/slider/solidarity.png'
-import HeroShape2 from '../../images/slider/line-shape.png'
-import HeroShape3 from '../../images/slider/shape-2.png'
-import HeroShape4 from '../../images/slider/shape.png'
+const ClickHandler = () => {
+   window.scrollTo(10, 0);
+}
 
 
 const HeroSection = () => {
-    const sliderSettings = {
-        autoplay: true,
-        speed: 1000,
-        lazyLoad: 'progressive',
-        fade: true, 
-        dots: true,
-    };
-    return (
-        <section className='hero_slider'>
-            <Slider {...sliderSettings} >
-                <div className="hero_slider_item">
-                    <div className="image">
-                        <img src={HeroImg1} alt="" />
-                    </div>
-                    <div className="container">
-                        <div className="content">
-                            <div className="shado_text animated" data-animation-in="fadeInUp">
-                                <span>NONTA</span>
-                                <div className="shape-4">
-                                    <img src={HeroShape1} alt="" />
-                                </div>
-                            </div>
-                            <div className="title animated" data-animation-in="fadeInUp">
-                                <h2>GIVE SOMEONE HAND
-                                    the people P<span>o</span><span>o</span>r.</h2>
-                                <div className="line-shape">
-                                    <img src={HeroShape2} alt="" />
-                                </div>
-                            </div>
-                            <div className="text animated" data-animation-in="fadeInUp">
-                                <p>Nullam eu nibh vitae est tempor molestie id sed exthe. Quisque dignissim maximus ipsum metus poor the
-                                    peoole ipsum.</p>
-                            </div>
-                            <div className="hero_btn animated" data-animation-in="fadeInUp">
-                                <Link to="/contact" className="btn_primary">Contact Us <i className="ti-arrow-right"></i></Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="shape-1">
-                        <img src={HeroShape3} alt="" />
-                    </div>
-                    <div className="shape-2">
-                        <img src={HeroShape4} alt="" />
-                    </div>
-                </div>
-                <div className="hero_slider_item">
-                    <div className="image">
-                        <img src={HeroImg2} alt="" />
-                    </div>
-                    <div className="container">
-                        <div className="content">
-                            <div className="shado_text animated" data-animation-in="fadeInUp">
-                                <span>NONTA</span>
-                                <div className="shape-4">
-                                    <img src={HeroShape1} alt="" />
-                                </div>
-                            </div>
-                            <div className="title animated" data-animation-in="fadeInUp">
-                                <h2>GIVE SOMEONE HAND
-                                    the people P<span>o</span><span>o</span>r.</h2>
-                                <div className="line-shape">
-                                    <img src={HeroShape2} alt="" />
-                                </div>
-                            </div>
-                            <div className="text animated" data-animation-in="fadeInUp">
-                                <p>Nullam eu nibh vitae est tempor molestie id sed exthe. Quisque dignissim maximus ipsum metus poor the
-                                    peoole ipsum.</p>
-                            </div>
-                            <div className="hero_btn animated" data-animation-in="fadeInUp">
-                                <Link to="/contact" className="btn_primary">Contact Us <i className="ti-arrow-right"></i></Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="shape-1">
-                        <img src={HeroShape3} alt="" />
-                    </div>
-                    <div className="shape-2">
-                        <img src={HeroShape4} alt="" />
-                    </div>
+   const sliderSettings = {
+      autoplay: true,
+      speed: 1000,
+      lazyLoad: 'progressive',
+      fade: true,
+      arrows:false,
+      dots: true,
+   };
+   return (
+      <section className='hero_slider'>
+         <Slider {...sliderSettings} >
+            <div className="hero_slider_item">
+               <img src={HeroImg1} alt="" />
+               <div className="content">
+                  <h2 className='title'>
+                     Unlock Your Potential With Stadum 2500+ Courses
+                  </h2>
+                  <span className='sub-title'>We want every student and study partner to feel that they are part of a common good and cohesive team. We help our teams form stronger relationships.</span>
+                  <div className="search-container">
+                     <input
+                        type="text"
+                        placeholder="What do you want to learn?"
+                        className="search-input"
+                     />
+                     <button className="search-button">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                           <path d="M13.3999 13.525L16.9999 17.125" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                           <path d="M15.4 8.325C15.4 4.34855 12.1765 1.125 8.2 1.125C4.22355 1.125 1 4.34855 1 8.325C1 12.3015 4.22355 15.525 8.2 15.525C12.1765 15.525 15.4 12.3015 15.4 8.325Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div className="heroVideo">
+                  <VideoModal />
+               </div>
+            </div>
+            <div className="hero_slider_item">
+               <img src={HeroImg2} alt="" />
+               <div className="content">
+                  <h2 className='title'>
+                     Unlock Your Potential With Stadum 2500+ Courses
+                  </h2>
+                  <span className='sub-title'>We want every student and study partner to feel that they are part of a common good and cohesive team. We help our teams form stronger relationships.</span>
+                  <div className="search-container">
+                     <input
+                        type="text"
+                        placeholder="What do you want to learn?"
+                        className="search-input"
+                     />
+                     <button className="search-button">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                           <path d="M13.3999 13.525L16.9999 17.125" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                           <path d="M15.4 8.325C15.4 4.34855 12.1765 1.125 8.2 1.125C4.22355 1.125 1 4.34855 1 8.325C1 12.3015 4.22355 15.525 8.2 15.525C12.1765 15.525 15.4 12.3015 15.4 8.325Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div className="heroVideo">
+                  <VideoModal />
+               </div>
+            </div>
+            <div className="hero_slider_item">
+               <img src={HeroImg1} alt="" />
+               <div className="content">
+                  <h2 className='title'>
+                     Unlock Your Potential With Stadum 2500+ Courses
+                  </h2>
+                  <span className='sub-title'>We want every student and study partner to feel that they are part of a common good and cohesive team. We help our teams form stronger relationships.</span>
+                  <div className="search-container">
+                     <input
+                        type="text"
+                        placeholder="What do you want to learn?"
+                        className="search-input"
+                     />
+                     <button className="search-button">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                           <path d="M13.3999 13.525L16.9999 17.125" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                           <path d="M15.4 8.325C15.4 4.34855 12.1765 1.125 8.2 1.125C4.22355 1.125 1 4.34855 1 8.325C1 12.3015 4.22355 15.525 8.2 15.525C12.1765 15.525 15.4 12.3015 15.4 8.325Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div className="heroVideo">
+                  <VideoModal />
+               </div>
+            </div>
+            <div className="hero_slider_item">
+               <img src={HeroImg2} alt="" />
+               <div className="content">
+                  <h2 className='title'>
+                     Unlock Your Potential With Stadum 2500+ Courses
+                  </h2>
+                  <span className='sub-title'>We want every student and study partner to feel that they are part of a common good and cohesive team. We help our teams form stronger relationships.</span>
+                  <div className="search-container">
+                     <input
+                        type="text"
+                        placeholder="What do you want to learn?"
+                        className="search-input"
+                     />
+                     <button className="search-button">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                           <path d="M13.3999 13.525L16.9999 17.125" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                           <path d="M15.4 8.325C15.4 4.34855 12.1765 1.125 8.2 1.125C4.22355 1.125 1 4.34855 1 8.325C1 12.3015 4.22355 15.525 8.2 15.525C12.1765 15.525 15.4 12.3015 15.4 8.325Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round" />
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div className="heroVideo">
+                  <VideoModal />
+               </div>
+            </div>
 
-                </div>
-                <div className="hero_slider_item">
-                    <div className="image">
-                        <img src={HeroImg3} alt="" />
-                    </div>
-                    <div className="container">
-                        <div className="content">
-                            <div className="shado_text animated" data-animation-in="fadeInUp">
-                                <span>NONTA</span>
-                                <div className="shape-4">
-                                    <img src={HeroShape1} alt="" />
-                                </div>
-                            </div>
-                            <div className="title animated" data-animation-in="fadeInUp">
-                                <h2>GIVE SOMEONE HAND
-                                    the people P<span>o</span><span>o</span>r.</h2>
-                                <div className="line-shape">
-                                    <img src={HeroShape2} alt="" />
-                                </div>
-                            </div>
-                            <div className="text animated" data-animation-in="fadeInUp">
-                                <p>Nullam eu nibh vitae est tempor molestie id sed exthe. Quisque dignissim maximus ipsum metus poor the
-                                    peoole ipsum.</p>
-                            </div>
-                            <div className="hero_btn animated" data-animation-in="fadeInUp">
-                                <Link to="/contact" className="btn_primary">Contact Us <i className="ti-arrow-right"></i></Link>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div className="shape-1">
-                        <img src={HeroShape3} alt="" />
-                    </div>
-                    <div className="shape-2">
-                        <img src={HeroShape4} alt="" />
-                    </div>
-                </div>
+         </Slider>
+         <ul className="social_widget">
+            <li>
+               <Link onClick={ClickHandler} to="/">
+                  <i className="ti-facebook"></i>
+               </Link>
+            </li>
+            <li>
+               <Link onClick={ClickHandler} to="/">
+                  <i className="ti-twitter-alt"></i>
+               </Link>
+            </li>
+            <li>
+               <Link onClick={ClickHandler} to="/">
+                  <i className="ti-linkedin"></i>
+               </Link>
+            </li>
+            <li>
+               <Link onClick={ClickHandler} to="/">
+                  <i className="ti-instagram"></i>
+               </Link>
+            </li>
+         </ul>
 
-            </Slider>
-          
-        </section>
+         <div className='countdown_section'>
+            <div className="item">
+               <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                     <path d="M36.3748 21.061L36.527 20.8581V13.6272L24.3514 18.4974L12.1758 13.6272V20.8578L12.328 21.0607C12.4535 21.2287 15.5116 25.17 24.3514 25.17C33.1912 25.17 36.2491 21.2284 36.3748 21.061Z" fill="#D3224D" />
+                     <path d="M47.561 45.7174H6.46829C5.35827 45.7174 4.2937 45.2764 3.50879 44.4915C2.72388 43.7066 2.28293 42.642 2.28293 41.532C2.28293 40.422 2.72388 39.3574 3.50879 38.5725C4.2937 37.7876 5.35827 37.3466 6.46829 37.3466H47.561C47.8637 37.3466 48.1541 37.2264 48.3681 37.0123C48.5822 36.7983 48.7025 36.5079 48.7025 36.2052C48.7025 35.9024 48.5822 35.6121 48.3681 35.398C48.1541 35.184 47.8637 35.0637 47.561 35.0637H6.46829C4.7528 35.0637 3.10756 35.7452 1.89452 36.9582C0.681479 38.1713 0 39.8165 0 41.532C0 43.2475 0.681479 44.8927 1.89452 46.1058C3.10756 47.3188 4.7528 48.0003 6.46829 48.0003H47.561C47.8637 48.0003 48.1541 47.88 48.3681 47.666C48.5822 47.4519 48.7025 47.1616 48.7025 46.8588C48.7025 46.5561 48.5822 46.2658 48.3681 46.0517C48.1541 45.8376 47.8637 45.7174 47.561 45.7174Z" fill="#D3224D" />
+                     <path d="M3.80469 41.5313C3.80469 41.8811 3.87358 42.2274 4.00743 42.5506C4.14128 42.8737 4.33746 43.1673 4.58478 43.4147C4.8321 43.662 5.12572 43.8582 5.44886 43.992C5.772 44.1259 6.11834 44.1948 6.4681 44.1948H47.5608V38.8679H6.4681C5.76172 38.8679 5.08427 39.1485 4.58478 39.648C4.0853 40.1475 3.80469 40.825 3.80469 41.5313Z" fill="#D3224D" />
+                     <path d="M40.3321 19.4638C41.3828 19.4638 42.2346 18.6121 42.2346 17.5614C42.2346 16.5107 41.3828 15.6589 40.3321 15.6589C39.2814 15.6589 38.4297 16.5107 38.4297 17.5614C38.4297 18.6121 39.2814 19.4638 40.3321 19.4638Z" fill="#D3224D" />
+                     <path d="M37.0253 11.7888L24.0804 6.85767L24.6222 5.43465L39.1111 10.9548L45.4242 8.42908L24.3513 -0.000244141L3.27832 8.42908L24.3513 16.8584L37.0253 11.7888Z" fill="#D3224D" />
+                     <path d="M39.5705 12.7593V14.229C40.0704 14.1064 40.5926 14.1064 41.0925 14.229V11.7101L39.111 10.9553L37.0249 11.7897L39.5705 12.7593Z" fill="#D3224D" />
+                     <path d="M6.84863 28.2141C6.84863 28.6177 7.00898 29.0049 7.2944 29.2903C7.57982 29.5757 7.96694 29.736 8.37058 29.736H36.2521L36.7594 26.6921H8.37058C7.96694 26.6921 7.57982 26.8525 7.2944 27.1379C7.00898 27.4233 6.84863 27.8104 6.84863 28.2141Z" fill="#D3224D" />
+                     <path d="M42.6147 28.214L41.3796 20.8035C40.7019 21.0452 39.9616 21.0452 39.2839 20.8035L38.0488 28.214H42.6147Z" fill="#D3224D" />
+                     <path d="M8.37078 33.5416H41.4732C41.776 33.5416 42.0663 33.4213 42.2804 33.2073C42.4944 32.9932 42.6147 32.7029 42.6147 32.4001C42.6147 32.0974 42.4944 31.8071 42.2804 31.593C42.0663 31.3789 41.776 31.2587 41.4732 31.2587H8.37078C7.56348 31.2587 6.78925 30.938 6.21841 30.3671C5.64757 29.7963 5.32687 29.0221 5.32687 28.2148C5.32687 27.4075 5.64757 26.6332 6.21841 26.0624C6.78925 25.4916 7.56348 25.1709 8.37078 25.1709H15.737C14.3629 24.6284 13.0909 23.8565 11.9754 22.8879H8.37078C6.95801 22.8879 5.60311 23.4492 4.60414 24.4481C3.60516 25.4471 3.04395 26.802 3.04395 28.2148C3.04395 29.6275 3.60516 30.9824 4.60414 31.9814C5.60311 32.9804 6.95801 33.5416 8.37078 33.5416Z" fill="#D3224D" />
+                     <path d="M37.3937 22.8879H36.7276C35.6121 23.8565 34.34 24.6285 32.9658 25.1709H37.0132L37.3937 22.8879Z" fill="#D3224D" />
+                  </svg>
+               </div>
+               <div className="text">
+                  <h2><CountUp end={2300}></CountUp>+</h2>
+                  <p>Online Courses</p>
+               </div>
+            </div>
+            <div className="item">
+               <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                     <path d="M41.8193 25.1345C41.6867 25.0824 38.5282 23.8546 34.7559 23.6277C31.2153 23.4143 28.2978 24.1515 26.1294 25.7789V47.9996C27.7082 45.4829 30.5296 44.3214 34.5245 44.5479C37.8613 44.737 40.7615 45.8577 40.7891 45.8685C41.2224 46.039 41.7118 45.984 42.0967 45.7219C42.4814 45.4598 42.7117 45.0243 42.7117 44.5588V26.4443C42.7116 25.8657 42.3577 25.3462 41.8193 25.1345ZM38.0834 37.2811C38.0132 38.0553 37.3283 38.6259 36.5548 38.5558C35.0398 38.4186 33.6559 38.4751 32.4417 38.7237C31.367 38.9432 30.8601 38.0158 30.7806 37.6271C30.6246 36.8656 31.1156 36.122 31.8771 35.966C33.3606 35.6623 35.0199 35.5905 36.8088 35.7525C37.5829 35.8227 38.1535 36.507 38.0834 37.2811ZM38.0834 31.2429C38.0133 32.0171 37.3283 32.5877 36.5548 32.5176C35.0414 32.3806 33.6575 32.4373 32.4416 32.6862C31.3668 32.906 30.86 31.9783 30.7805 31.5897C30.6245 30.8282 31.1155 30.0845 31.877 29.9286C33.3623 29.6246 35.0215 29.5525 36.8087 29.7143C37.5828 29.7844 38.1535 30.4687 38.0834 31.2429Z" fill="#D3224D" />
+                     <path d="M14.6881 23.6276C10.9159 23.8544 7.75729 25.0823 7.62471 25.1344C7.08633 25.3461 6.73242 25.8656 6.73242 26.4441V44.5587C6.73242 45.0243 6.96267 45.4598 7.34745 45.7219C7.73233 45.9841 8.22182 46.0389 8.65502 45.8685C8.68335 45.8573 11.5259 44.752 14.8573 44.5514C18.8845 44.3091 21.7274 45.4692 23.3147 47.9996V25.7789C21.1461 24.1516 18.2283 23.4146 14.6881 23.6276ZM18.6636 37.627C18.584 38.0156 18.0772 38.9431 17.0025 38.7236C15.7883 38.475 14.4044 38.4185 12.8893 38.5557C12.1158 38.6258 11.4308 38.0553 11.3607 37.281C11.2906 36.5069 11.8613 35.8226 12.6354 35.7524C14.4243 35.5903 16.0836 35.6622 17.5671 35.9659C18.3285 36.1219 18.8195 36.8655 18.6636 37.627ZM18.6636 31.5895C18.584 31.9781 18.0772 32.9058 17.0025 32.686C15.7866 32.4371 14.4026 32.3804 12.8892 32.5174C11.0256 32.6165 10.785 29.9506 12.6353 29.7141C14.4225 29.5523 16.0817 29.6244 17.567 29.9284C18.3285 30.0843 18.8195 30.8281 18.6636 31.5895Z" fill="#D3224D" />
+                     <path d="M24.7221 11.9211C28.0195 11.9211 30.7019 9.23847 30.7019 5.94122C30.4013 -1.98101 19.0416 -1.97886 18.7422 5.94131C18.7423 9.23847 21.4248 11.9211 24.7221 11.9211Z" fill="#D3224D" />
+                     <path d="M9.64731 15.6886C12.9447 15.6886 15.6271 13.006 15.6271 9.7088C15.3265 1.78657 3.96688 1.78872 3.66748 9.70889C3.66748 13.0061 6.34998 15.6886 9.64731 15.6886Z" fill="#D3224D" />
+                     <path d="M39.7968 15.6886C43.0942 15.6886 45.7767 13.006 45.7767 9.7088C45.476 1.78657 34.1163 1.78872 33.8169 9.70889C33.817 13.0061 36.4995 15.6886 39.7968 15.6886Z" fill="#D3224D" />
+                     <path d="M33.6669 18.4839C33.6669 16.2224 32.4103 14.19 30.388 13.1798L29.9888 12.9803C27.0629 15.2972 22.3826 15.2973 19.4566 12.9812L19.0543 13.1824C17.033 14.194 15.7773 16.2263 15.7773 18.4863V20.7784C18.27 20.7699 21.7119 21.2001 24.7221 23.3243C27.7323 21.1997 31.1733 20.7696 33.6669 20.7783V18.4839Z" fill="#D3224D" />
+                     <path d="M45.4631 16.9474L45.064 16.7479C42.7678 18.5529 39.1944 19.0357 36.459 17.8448C36.4743 18.0563 36.4822 18.2697 36.4822 18.4845V20.9631C39.8928 21.384 42.5231 22.3877 42.8499 22.5162C44.4762 23.1558 45.5269 24.6981 45.5269 26.4454V29.9112H47.3347C48.1119 29.9112 48.7421 29.2811 48.7421 28.5038V22.2515C48.7421 19.9901 47.4855 17.9575 45.4631 16.9474Z" fill="#D3224D" />
+                     <path d="M12.9625 18.4858C12.9625 18.2703 12.9705 18.0561 12.9859 17.8438C10.2505 19.0347 6.67834 18.5522 4.38175 16.7479L3.97952 16.9491C1.95831 17.9606 0.702637 19.993 0.702637 22.2529V28.503C0.702637 29.2802 1.33277 29.9104 2.11003 29.9104H3.91778V26.4446C3.91778 24.6973 4.96854 23.155 6.59474 22.5154C6.92163 22.3869 9.55177 21.3832 12.9625 20.9623V18.4858Z" fill="#D3224D" />
+                  </svg>
+               </div>
+               <div className="text">
+                  <h2>Expert Instructors</h2>
+                  <p>Find the right instructor</p>
+               </div>
+            </div>
+            <div className="item">
+               <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="43" height="48" viewBox="0 0 43 48" fill="none">
+                     <path fillRule="evenodd" clipRule="evenodd" d="M21.7226 21.8777C22.9065 21.8777 24.0638 22.2288 25.0481 22.8865C26.0325 23.5443 26.7997 24.4791 27.2528 25.5729C27.7058 26.6667 27.8244 27.8703 27.5934 29.0314C27.3625 30.1925 26.7924 31.2591 25.9552 32.0963C25.1181 32.9334 24.0515 33.5035 22.8903 33.7345C21.7292 33.9654 20.5256 33.8469 19.4319 33.3938C18.3381 32.9408 17.4032 32.1736 16.7455 31.1892C16.0877 30.2048 15.7367 29.0475 15.7367 27.8636C15.7367 26.2761 16.3673 24.7535 17.4899 23.631C18.6125 22.5084 20.135 21.8777 21.7226 21.8777ZM21.5207 11.4976C21.7122 11.5652 21.9215 11.5617 22.1106 11.4878V11.4885C26.3968 9.88401 30.6862 8.28739 34.9789 6.6986C35.0058 6.68851 35.0346 6.68475 35.0632 6.68761C35.0918 6.69047 35.1193 6.69987 35.1437 6.71508C35.168 6.7303 35.1885 6.75092 35.2036 6.77534C35.2187 6.79977 35.228 6.82735 35.2307 6.85594L35.4953 9.54517C35.4996 9.58487 35.491 9.6249 35.4706 9.65928C35.4503 9.69366 35.4195 9.72054 35.3826 9.73592C35.1393 9.84028 34.9326 10.0146 34.7887 10.2368C34.6447 10.4589 34.5701 10.7189 34.5743 10.9835L34.6196 13.7542C34.6202 13.7899 34.6277 13.8251 34.6419 13.8579C34.656 13.8907 34.6765 13.9203 34.7021 13.9452C34.7277 13.97 34.758 13.9896 34.7912 14.0027C34.8244 14.0159 34.8598 14.0224 34.8955 14.0218L37.0193 13.9871C37.0913 13.986 37.16 13.9563 37.2102 13.9046C37.2604 13.8529 37.288 13.7833 37.2869 13.7113L37.2416 10.9406C37.2363 10.6386 37.1289 10.3472 36.9367 10.1141C36.7445 9.88102 36.479 9.71996 36.1835 9.65725C36.1443 9.64939 36.1087 9.62907 36.082 9.59932C36.0554 9.56956 36.039 9.53198 36.0355 9.49217L35.7467 6.56233C35.7423 6.52107 35.7519 6.47953 35.7739 6.44435C35.7959 6.40916 35.829 6.38237 35.868 6.36825C36.5742 6.10615 37.2797 5.84389 37.9846 5.58146C37.9998 5.57563 38.0128 5.56528 38.0219 5.55182C38.0309 5.53836 38.0357 5.52244 38.0354 5.5062C38.0351 5.48997 38.0299 5.47421 38.0204 5.46106C38.0109 5.4479 37.9975 5.43799 37.9822 5.43265L21.9246 0.0483025C21.7331 -0.0193167 21.5237 -0.0158395 21.3346 0.0580994L5.46185 5.96472C5.44635 5.97008 5.43292 5.98018 5.42346 5.99357C5.414 6.00697 5.40898 6.023 5.40911 6.0394C5.40924 6.0558 5.41452 6.07175 5.42419 6.08499C5.43386 6.09824 5.44744 6.10812 5.46302 6.11324L21.5207 11.4976ZM32.4224 14.5276C32.3971 14.5392 32.3713 14.5503 32.3453 14.5607L22.4746 18.4947C22.1273 18.6377 21.7389 18.6441 21.3871 18.5127L11.3931 14.9039C11.3055 14.8722 11.2344 14.8255 11.1374 14.8908C11.1112 14.908 11.0899 14.9316 11.0755 14.9593C11.0611 14.987 11.054 15.018 11.055 15.0492L11.0656 15.7046C11.0657 15.8846 11.122 16.06 11.2266 16.2064C11.3312 16.3528 11.4789 16.4629 11.649 16.5213L21.6432 20.1303C21.8463 20.2081 22.0715 20.2046 22.2721 20.1205L32.1427 16.1864C32.311 16.1223 32.4551 16.0073 32.5548 15.8573C32.6546 15.7074 32.7049 15.53 32.6989 15.35L32.6882 14.6952C32.6878 14.664 32.6796 14.6333 32.6643 14.6061C32.649 14.5789 32.6272 14.5559 32.6008 14.5393C32.5743 14.5226 32.5442 14.5129 32.513 14.5109C32.4819 14.5089 32.4507 14.5147 32.4224 14.5279V14.5276ZM11.0292 13.4777L10.9544 8.9026C10.9537 8.87257 10.9604 8.84284 10.9737 8.81592C10.987 8.78899 11.0066 8.76568 11.0308 8.74793C11.055 8.73019 11.0832 8.71855 11.1129 8.71399C11.1425 8.70943 11.1729 8.71209 11.2013 8.72175L21.3158 12.1133C21.6477 12.2291 22.01 12.2231 22.3378 12.0963V12.0956L32.3347 8.37445C32.3628 8.36387 32.393 8.36022 32.4229 8.36381C32.4527 8.36739 32.4812 8.3781 32.506 8.39503C32.5308 8.41197 32.5512 8.43462 32.5654 8.46108C32.5796 8.48755 32.5872 8.51704 32.5876 8.54707L32.6624 13.1222C32.6684 13.3021 32.618 13.4794 32.5183 13.6293C32.4186 13.7792 32.2745 13.8942 32.1062 13.9583L22.2355 17.8919C22.035 17.9761 21.8098 17.9796 21.6068 17.9017L11.6122 14.293C11.4422 14.2347 11.2946 14.1247 11.19 13.9785C11.0854 13.8323 11.0291 13.6571 11.0288 13.4773L11.0292 13.4777ZM13.5742 36.0215C12.8153 35.6367 11.9759 35.4374 11.125 35.4397H6.21993C4.76842 35.4443 3.37765 36.0229 2.35128 37.0493C1.3249 38.0756 0.746271 39.4664 0.741724 40.9179V41.5667C0.741299 41.5924 0.746384 41.618 0.75664 41.6417C0.766895 41.6653 0.782085 41.6865 0.801191 41.7038C2.08632 42.9034 3.62855 43.7935 5.31014 44.3061C6.99173 44.8188 8.76822 44.9404 10.504 44.6618C10.6165 44.6438 10.7763 44.4843 10.5432 44.2827C10.4981 44.2441 10.462 44.1961 10.4372 44.1421C10.4125 44.0882 10.3997 44.0295 10.3998 43.9701V42.7876C10.4012 41.5385 10.6911 40.3065 11.2468 39.1877C11.8024 38.0689 12.6089 37.0935 13.6033 36.3375C13.6285 36.3182 13.6485 36.2928 13.6612 36.2637C13.6739 36.2346 13.6791 36.2028 13.6761 36.1712C13.6732 36.1395 13.6623 36.1092 13.6444 36.0829C13.6265 36.0567 13.6023 36.0354 13.5739 36.0211L13.5742 36.0215ZM12.0067 44.4922L11.2873 43.8554L11.2252 43.7162V42.7884C11.2312 40.8566 12.0012 39.0055 13.3673 37.6395C14.7333 36.2735 16.5844 35.5034 18.5162 35.4975H24.93C28.9032 35.4975 32.2208 38.7373 32.2208 42.7884V43.7123C32.2212 43.7388 32.2158 43.765 32.2049 43.7892C32.1941 43.8133 32.1781 43.8348 32.1581 43.8522L31.4614 44.4732L31.4621 44.474L30.358 45.3125C27.7319 47.1225 24.6035 48.0615 21.4147 47.9969C18.226 47.9323 15.1382 46.8672 12.5876 44.9524L12.0067 44.4926V44.4922ZM8.67218 24.0507C9.59672 24.0507 10.5005 24.3248 11.2693 24.8384C12.038 25.3521 12.6372 26.0821 12.991 26.9363C13.3448 27.7905 13.4374 28.7304 13.257 29.6372C13.0767 30.5439 12.6315 31.3769 11.9777 32.0306C11.324 32.6844 10.4911 33.1296 9.58427 33.31C8.67749 33.4904 7.73759 33.3978 6.88342 33.044C6.02925 32.6902 5.29917 32.091 4.78552 31.3223C4.27187 30.5536 3.99771 29.6498 3.99771 28.7252C3.99773 27.4855 4.49023 26.2965 5.36685 25.4199C6.24347 24.5433 7.43243 24.0507 8.67218 24.0507ZM32.9409 44.6611C34.5689 44.9224 36.2339 44.8319 37.8239 44.3958C39.4139 43.9596 40.8921 43.1878 42.1588 42.1324L42.1581 42.1315L42.6409 41.7028C42.661 41.6855 42.6771 41.664 42.688 41.6397C42.6989 41.6155 42.7043 41.5892 42.7039 41.5626V40.9175C42.7003 39.4657 42.1219 38.0744 41.0954 37.0479C40.0688 36.0213 38.6775 35.4429 37.2257 35.4393H32.3206C31.469 35.4381 30.6291 35.6376 29.8689 36.0215C29.8406 36.0358 29.8164 36.0571 29.7985 36.0833C29.7807 36.1096 29.7698 36.1399 29.7668 36.1715C29.7639 36.2031 29.769 36.2349 29.7817 36.264C29.7945 36.2931 29.8143 36.3185 29.8395 36.3378C30.8341 37.0938 31.6407 38.0691 32.1968 39.1878C32.7528 40.3065 33.0431 41.5384 33.0453 42.7876V43.9693H33.0441C33.0441 44.3054 32.7202 44.3049 32.7916 44.5322C32.8016 44.5657 32.821 44.5956 32.8474 44.6184C32.8738 44.6413 32.9063 44.6561 32.9408 44.6612L32.9409 44.6611ZM34.7729 24.0506C35.6975 24.0505 36.6013 24.3246 37.3701 24.8381C38.1389 25.3517 38.7381 26.0818 39.092 26.9359C39.4459 27.7901 39.5386 28.73 39.3582 29.6368C39.1779 30.5436 38.7328 31.3766 38.0791 32.0304C37.4253 32.6842 36.5924 33.1294 35.6856 33.3098C34.7789 33.4903 33.8389 33.3977 32.9847 33.044C32.1305 32.6902 31.4004 32.091 30.8868 31.3223C30.3731 30.5536 30.0989 29.6498 30.0989 28.7252C30.0989 27.4856 30.5913 26.2967 31.4679 25.42C32.3444 24.5434 33.5333 24.0508 34.7729 24.0507V24.0506Z" fill="#D3224D" />
+                  </svg>
+               </div>
+               <div className="text">
+                  <h2>Lifetime Access</h2>
+                  <p>Learn on you rschedule</p>
+               </div>
+            </div>
+         </div>
+      </section>
 
-    );
+   );
 
 
 }

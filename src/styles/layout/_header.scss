@@ -227,10 +227,15 @@
 
 
 .menu_bar {
-   background: $white;
+   position: absolute;
+   left: 0;
+   width: 100%;
+   z-index: 11;
+
    @media (max-width:991px) {
       border-top: 1px solid $template-color;
       background: #081933;
+      position: unset;
    }
 
 

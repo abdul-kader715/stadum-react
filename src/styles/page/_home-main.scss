@@ -1,3 +1,98 @@
+/*3.11 countdown_section */
+.countdown_section {
+   position: absolute;
+   right: 150px;
+   bottom: 10px;
+   z-index: 1;
+   max-width: 872px;
+   display: inline-flex;
+   align-items: center;
+   gap: 40px;
+
+   @media (max-width:1399px) {
+      right: 50px;
+      max-width: 800px;
+   }
+
+
+   @media (max-width:991px) {
+      position: unset;
+      margin-left: 50px;
+   }
+
+   @media (max-width:767px) {
+      flex-wrap: wrap;
+   }
+   @media (max-width:575px) {
+      margin: 0;
+   }
+   .item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+
+      @media (max-width:991px) {
+         flex-direction: column;
+         text-align: center;
+
+      }
+
+      @media (max-width:767px) {
+         flex-basis: 45%;
+      }
+
+      @media (max-width:575px) {
+         flex-basis: 100%;
+      }
+
+      &::before {
+         position: absolute;
+         left: -20px;
+         top: 50%;
+         transform: translateY(-50%);
+         content: '';
+         width: 1px;
+         height: 64px;
+         background: #D3DBE2;
+
+         @media (max-width:767px) {
+            display: none;
+         }
+      }
+
+      .text {
+         h2 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: 0.56px;
+            margin-bottom: 0;
+
+            @media (max-width:1399px) {
+               font-size: 22px;
+               line-height: 35px;
+            }
+         }
+
+         p {
+            color: #081933;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 0;
+         }
+      }
+
+      &:first-child {
+
+         &::before {
+            display: none;
+         }
+
+      }
+   }
+}
+
 /*3.11 about_section */
 .about_section {
    .image {
@@ -866,14 +961,18 @@
    position: relative;
    z-index: 1;
    background: #FFF6F8;
+   overflow: hidden;
 
    .top_title {
       text-align: left;
       max-width: 341px;
       margin-bottom: 78px;
 
+
       @media (max-width:991px) {
-         margin-bottom: 40px;
+         text-align: center;
+         margin: 0 auto;
+         margin-bottom: 30px;
       }
 
       h2 {
@@ -893,26 +992,57 @@
 
    .slick-arrow {
       position: absolute;
-      right: 0;
-      top: 0;
+      top: -160px;
       width: 48px;
       height: 48px;
       border-radius: 100px;
       background: $white;
       font-size: 0;
-      &::before{
+      z-index: 1;
+      border: 0;
+      transition: all .3s ease-in-out;
+
+      &::before {
          position: absolute;
-         content:'';
+         content: '';
          left: 50%;
          top: 50%;
-         transform: translate(-50%,-50%);
+         transform: translate(-50%, -50%);
+         z-index: 11;
+         width: 48px;
+         height: 48px;
+         transition: all .3s ease-in-out;
       }
 
-      &.slick-prev{
+      &.slick-prev {
+         right: 62px;
 
+         &::before {
+            background: url(../images/left-arrow.png) center no-repeat;
+         }
 
-         &::before{
-            background: url();
+         &:hover {
+            background: $template-color;
+
+            &::before {
+               background: url(../images/left-arrow2.png) center no-repeat;
+            }
+         }
+      }
+
+      &.slick-next {
+         right: 0;
+
+         &::before {
+            background: url(../images/rigth-arrow.png) center no-repeat;
+         }
+
+         &:hover {
+            background: $template-color;
+
+            &::before {
+               background: url(../images/rigth-arrow2.png) center no-repeat;
+            }
          }
       }
    }
@@ -925,6 +1055,50 @@
       max-height: 551.931px;
       z-index: -1;
    }
+
+   .shape {
+      position: absolute;
+      right: 236px;
+      top: 90px;
+      z-index: -1;
+
+      @media (max-width:991px) {
+         display: none;
+      }
+   }
+
+   .shape2 {
+      position: absolute;
+      bottom: 66px;
+      right: 68px;
+      z-index: -1;
+   }
+
+   .slick-dots {
+      margin-top: 20px;
+      text-align: center;
+
+      li {
+         display: inline-block;
+         margin: 0 3px;
+
+         button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50px;
+            border: 0;
+            background: $white;
+            font-size: 0;
+         }
+
+         &.slick-active {
+            button {
+               background: $template-color;
+            }
+         }
+      }
+   }
+
 }
 
 .team_card {
@@ -934,12 +1108,19 @@
    padding-top: 18px;
    background: $white;
 
+   @media (max-width:767px) {
+      margin: 0 auto;
+   }
+
    .image {
       margin: 0 auto;
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100%;
+
+      img {}
    }
 
    .content {

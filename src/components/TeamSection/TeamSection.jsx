@@ -4,7 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 import teamData from '../../api/team';
-// import bgShape from '../../images/team/shape.svg';
+import Shape from '../../images/categorie/shape-3.png';
+import Shape2 from '../../images/shape-dot.png';
 
 
 // import Shape from '../../images/team/bg_shape.png'
@@ -22,7 +23,37 @@ const TeamSection = (props) => {
       slidesToScroll: 1,
       dots: false,
       arrows: true,
+      responsive: [
+         {
+            breakpoint: 1399,
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               infinite: true,
+               dots: false
+            }
+         },
+         {
+            breakpoint: 991,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+               dots: true,
+               arrows: false,
+            }
+         },
+         {
+            breakpoint: 767,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               dots: true,
+               arrows: false,
+            }
+         }
+      ]
    };
+
    return (
       <section className="team_section section_space">
          <div className="container">
@@ -83,6 +114,12 @@ const TeamSection = (props) => {
                </defs>
             </svg>
 
+         </div>
+         <div className="shape">
+            <img src={Shape} alt="" />
+         </div>
+         <div className="shape2">
+            <img src={Shape2} alt="" />
          </div>
       </section>
    );
